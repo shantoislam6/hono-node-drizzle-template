@@ -1,0 +1,40 @@
+{
+  "name": "t2site-backend",
+  "type": "module",
+  "license": "LSC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/desyed/t2site-backend.git"
+  },
+  "scripts": {
+    "build": "nest build",
+    "dev:up": "docker compose -f docker-compose.dev.yml up -d",
+    "dev:down": "docker compose -f docker-compose.dev.yml down",
+    "dev": "pnpm dev:up && nest start --watch",
+    "preview:dev": "pnpm dev:up && node dist/main.js",
+    "db:generate": "drizzle-kit generate"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.2",
+    "@hono/node-ws": "^1.0.4",
+    "@hono/oauth-providers": "^0.6.2",
+    "@hono/zod-validator": "^0.4.1",
+    "add": "^2.0.6",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
+    "hono": "^4.6.6",
+    "hono-rate-limiter": "^0.4.0",
+    "ioredis": "^5.4.1",
+    "pg": "^8.13.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.4.5",
+    "@types/node": "^20.17.0",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.26.2",
+    "tsx": "^4.7.1",
+    "typescript": ">=5.0.0"
+  }
+}

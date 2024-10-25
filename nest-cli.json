@@ -1,0 +1,9 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "./src",
+  "compilerOptions": {
+    "assets": ["**/*.html", "**/*.css", "**/*.json", "**/*.sql", "**/*.xml", "**/*.js", "**/*.ejs"],
+    "watchAssets": true,
+    "tsConfigPath": "./tsconfig.json"
+  }
+}

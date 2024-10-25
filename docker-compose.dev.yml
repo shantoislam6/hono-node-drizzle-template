@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  redis:
+    container_name: t2-redis
+    image: redis
+    restart: always
+    environment:
+      REDIS_URI: redis://default:password@redis:6379
+    volumes:
+      - t2site_redis_volume_dev_data:/var/lib/redis/data
+    ports:
+      - 6378:6379
+
+  db:
+    image: postgres:14
+    container_name: t2-db
+    restart: always
+    ports:
+      - '127.0.0.1:5434:5432'
+    volumes:
+      - t2site_pg_dev_data:/var/lib/postgresql/data
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: t2site
+
+volumes:
+  t2site_pg_dev_data:
+  t2site_redis_volume_dev_data:
