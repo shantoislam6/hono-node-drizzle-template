@@ -1,10 +1,9 @@
-# t2site-backend
-
+# hono-node-drizzle-template
 This is the backend for the T2Site application, built with [NestJS](https://nestjs.com/), [Drizzle ORM](https://orm.drizzle.team/), [Hono](https://hono.dev/), and other essential libraries.
 
 ## Table of Contents
 
-- [t2site-backend](#t2site-backend)
+- [hono-node-drizzle-template](#hono-node-drizzle-template)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Getting Started](#getting-started)
